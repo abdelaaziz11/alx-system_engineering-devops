@@ -1,13 +1,15 @@
 #!/usr/bin/env bash
 # This script is displaying "Best School" 10 times & 9
 
-for (( i=0 ; i<10 ; i++ ))
+counter=0
+
+while [ $counter -lt 10 ]
 do
-	if [ $i = 8 ]
+	if [ $counter -eq 8 ]
 	then
-		echo "Best School"
-		echo "Hi"
+		echo -e "Best School\nHi"
 	else
 		echo "Best School"
 	fi
+	((counter++))
 done
