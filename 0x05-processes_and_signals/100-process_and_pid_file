@@ -9,10 +9,12 @@ function love() {
 	exit
 }
 
+trap "echo I hate the kill command;love" SIGTERM
+trap "echo Y U no love me?!;love" SIGINT
+
 pid_file="/var/run/myscript.pid"
 echo $$ >> $pid_file
-trap '"echo "I hate the kill command"' 15
-trap '"echo "Y U no love me?!"' SIGINT
+
 while true
 do
 	echo "To infinity and beyond"
