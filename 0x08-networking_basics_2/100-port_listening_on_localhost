@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+#listens on poer 98 on localhost
+
+nc -l localhost 98
