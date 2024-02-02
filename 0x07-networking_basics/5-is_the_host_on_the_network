@@ -5,10 +5,10 @@
 IP="${1}"
 
 # filename
-fn=$(basename "${BASH_SOURCE[@]}")
+#fn=$(basename "${BASH_SOURCE[@]}")
 
 if ! [ "$IP" ]; then
-	echo "Usage: ${fn} {IP_ADDRESS}"
+	echo "Usage: 5-is_the_host_on_the_network {IP_ADDRESS}"
 else
 	ping -c 5 "${IP}"
 fi
