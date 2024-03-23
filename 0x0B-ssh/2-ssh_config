@@ -1,4 +1,8 @@
 #!/usr/bin/env bash
 # Client configuration file
 
-
+Host my_server
+  HostName my_server.com
+  User my_username
+  IdentityFile ~/.ssh/school
+  PasswordAuthentication no
