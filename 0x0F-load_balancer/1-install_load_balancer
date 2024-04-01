@@ -4,7 +4,7 @@
 apt-get install -y software-properties-common
 add-apt-repository -y ppa:vbernat/haproxy-1.8
 apt-get -y update
-apt-get install -y haproxy=1.8.\*
+sudo apt-get install -y haproxy=1.8.\*
 
 echo "
    listen load_balancer
@@ -19,4 +19,4 @@ echo "
 
 echo "ENABLED=1" > /etc/default/haproxy
 
-service haproxy start
+sudo service haproxy start
