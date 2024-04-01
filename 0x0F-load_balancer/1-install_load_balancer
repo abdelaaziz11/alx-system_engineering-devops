@@ -6,7 +6,7 @@ add-apt-repository -y ppa:vbernat/haproxy-1.8
 apt-get -y update
 sudo apt-get install -y haproxy=1.8.\*
 
-echo "ENABLED=1" > /etc/default/haproxy
+echo "ENABLED=1" | sudo tree -a /etc/default/haproxy
 echo "
    listen load_balancer
    bind *:80
@@ -16,6 +16,6 @@ echo "
    option forwardfor
    server 519443-web-01 54.210.88.19:80 check
    server 519443-web-02 54.157.134.108:80 check
-" >> /etc/haproxy/haproxy.cfg
+" | sudo tree -a /etc/haproxy/haproxy.cfg
 
 service haproxy start
