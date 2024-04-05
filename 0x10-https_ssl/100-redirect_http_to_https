@@ -35,14 +35,14 @@ defaults
 
 frontend abdelaaziz11-frontend
         bind *:80
-        #mode http
-        #http-request redirect scheme https code 301 unless { ssl_fc }
-        #http-request set-header X_Forwarded-Proto http
+        mode http
+        http-request redirect scheme https code 301 unless { ssl_fc }
+        http-request set-header X_Forwarded-Proto http
         default_backend abdelaaziz11-backend
 
 frontend abdelaaziz11-frontend-https
         bind *:443 ssl crt /etc/haproxy/certs/abdelaaziz11.tech.pem
-        #http-request set-header X-Forwarded-Proto https
+        http-request set-header X-Forwarded-Proto https
         default_backend abdelaaziz11-backend
 
 backend abdelaaziz11-backend
