@@ -4,7 +4,10 @@
 #ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
 #service nginx restart
 #rm /run/nginx.pid
-sudo sed -i 's/8080/80/g' /etc/nginx/sites-enabled/default /etc/nginx/sites-available/default
-sudo service nginx restart
-sudo pkill -o nginx
+#sudo sed -i 's/8080/80/g' /etc/nginx/sites-enabled/default /etc/nginx/sites-available/default
+#sudo service nginx restart
+#sudo pkill -o nginx
 
+#!/bin/bash
+service nginx stop
+curl 0:80
