@@ -5,8 +5,10 @@ from sys import argv
 
 
 if __name__ == "__main__":
+    #api url
     reqs = "https://jsonplaceholder.typicode.com/"
 
+    #user and todos url with ID
     user = requests.get(reqs + "users/{}".format(argv[1])).json()
     todos = requests.get(reqs + "todos", params={"userId": argv[1]}).json()
 
