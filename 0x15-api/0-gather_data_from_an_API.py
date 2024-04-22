@@ -8,7 +8,7 @@ import sys
 
 
 if __name__ == "__main__":
-    reqs = 'https://jsonplaceholder.typicode.com/'
+    reqs = "https://jsonplaceholder.typicode.com/"
     user = requests.get(reqs + "users/{}".format(sys.argv[1])).json()
     todos = requests.get(reqs + "todos", params={"userId": sys.argv[1]}).json()
 
