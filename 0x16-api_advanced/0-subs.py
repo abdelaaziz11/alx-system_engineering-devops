@@ -7,3 +7,4 @@ def number_of_subscribers(subreddit):
     ''' returns the number of subscribers '''
     if not subreddit:
         return 0;
+    return int(subreddit);
